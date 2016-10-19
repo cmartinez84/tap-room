@@ -21,4 +21,8 @@ import { Keg } from './keg.model';
 
 export class EditKegComponent {
   @Input() childSelectedKeg: Keg;
+  // @Output() pintSold = new EventEmitter();
+  // sellPint() {
+  //   this.pintSold.emit();
+  // }
 }

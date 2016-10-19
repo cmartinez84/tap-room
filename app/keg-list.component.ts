@@ -8,10 +8,11 @@ import { Keg } from './keg.model';
   <div *ngFor="let currentKeg of childKegList">
     <h1>{{currentKeg.name}}</h1>
     <p>by {{currentKeg.brand}}</p>
-    <p>{{currentKeg.alcoholContent}} % </p>
+    <p>Alcohol Content: {{currentKeg.alcoholContent}} % </p>
     <p>$ {{currentKeg.price}}</p>
-    <p>{{currentKeg.servings}}</p>
+    <p>Pints left: {{currentKeg.servings}}</p>
     <button (click)="editButtonClicked(currentKeg)">Edit</button>
+    <button (click)="sellPint(currentKeg)">Sell Pint</button>
   </div>
   `
 })
@@ -21,5 +22,8 @@ export class KegListComponent {
   @Output() clickSender = new EventEmitter();
   editButtonClicked(kegToEdit: Keg){
     this.clickSender.emit(kegToEdit);
+  }
+  sellPint(currentKeg){
+    currentKeg.servings -= 1;
   }
 }
