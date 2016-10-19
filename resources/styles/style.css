@@ -1,3 +1,43 @@
 h1 {
   color: blue;
 }
+
+.cheap {
+  color: green;
+}
+
+.expensive {
+  color: gold;
+}
+
+
+/*
+ * Pulse animation
+*/
+
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.015);
+          color:pink;
+          text-shadow: 1px 1px 1px yellow;}
+    100% { transform: scale(1); }
+}
+.danger{
+    color:red;
+    animation: pulse 1s infinite;
+    /*text-align: center;*/
+}
+
+/*.pulse {
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #001F3F;
+  }
+  100% {
+    background-color: #FF4136;
+  }
+}*/
