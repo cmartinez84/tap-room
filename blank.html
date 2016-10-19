@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div class="">
+      <label for="">Enter New Keg</label>
+      <form>
+        <label>Name</label>
+        <input #newName>
+        <label>Brand</label>
+        <input #newBrand>
+        <label>alcohol Content</label>
+        <input #newAlcoholContent>
+        <label>Price</label>
+        <input #newPrice>
+        <button (click)= "addClicked(newName.value, newBrand.value, newAlcoholContet.value, newPrice.value)">Add Keg</button>
+      </form>
+    </div>
+
+
+
+  </body>
+</html>
